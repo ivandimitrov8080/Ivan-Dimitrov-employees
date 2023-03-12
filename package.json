@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.14",
-    "collection-util": "link:/home/ivand/src/ivan-dimitrov-employees/collection-util/pkg",
+    "collection-util": "link:/home/ivand/src/ivan-dimitrov-employees/wasm/collection-util/pkg",
     "d3": "^7.8.2",
     "dayjs": "^1.11.7",
     "postcss": "^8.4.21",

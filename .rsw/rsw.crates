@@ -1,1 +1,1 @@
-collection-util :~> collection-util/pkg
+wasm/collection-util :~> wasm/collection-util/pkg

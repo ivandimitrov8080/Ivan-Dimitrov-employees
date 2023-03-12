@@ -6,7 +6,7 @@ specifiers:
   '@types/react-dom': ^18.0.10
   '@vitejs/plugin-react-swc': ^3.0.0
   autoprefixer: ^10.4.14
-  collection-util: link:/home/ivand/src/ivan-dimitrov-employees/collection-util/pkg
+  collection-util: link:/home/ivand/src/ivan-dimitrov-employees/wasm/collection-util/pkg
   d3: ^7.8.2
   dayjs: ^1.11.7
   postcss: ^8.4.21
@@ -21,7 +21,7 @@ specifiers:
 
 dependencies:
   autoprefixer: 10.4.14_postcss@8.4.21
-  collection-util: link:collection-util/pkg
+  collection-util: link:wasm/collection-util/pkg
   d3: 7.8.2
   dayjs: 1.11.7
   postcss: 8.4.21

@@ -40,7 +40,7 @@ dir = "my-template"
 
 #! 📦 -------- package: @rsw/utils --------
 [[crates]]
-name = "collection-util"
+name = "wasm/collection-util"
 link = true
 
 #! 📦 -------- package: @rsw/hello --------
