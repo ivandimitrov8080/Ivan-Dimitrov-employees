@@ -7,12 +7,13 @@
   "homepage": "https://ivandimitrov8080.github.io/Ivan-Dimitrov-employees/",
   "scripts": {
     "dev": "vite",
-    "build": "./wasm/collection-util/build && tsc && vite build",
-    "preview": "vite preview"
+    "build": "rsw build && tsc && vite build",
+    "preview": "vite preview",
+    "rsw": "rsw"
   },
   "dependencies": {
     "autoprefixer": "^10.4.14",
-    "collection-util": "file:wasm/collection-util/pkg",
+    "collection-util": "link:/home/ivand/src/ivan-dimitrov-employees/collection-util/pkg",
     "d3": "^7.8.2",
     "dayjs": "^1.11.7",
     "postcss": "^8.4.21",
@@ -28,6 +29,7 @@
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react-swc": "^3.0.0",
     "typescript": "^4.9.3",
-    "vite": "^4.1.0"
+    "vite": "^4.1.0",
+    "vite-plugin-rsw": "^2.0.11"
   }
 }

@@ -6,7 +6,7 @@ specifiers:
   '@types/react-dom': ^18.0.10
   '@vitejs/plugin-react-swc': ^3.0.0
   autoprefixer: ^10.4.14
-  collection-util: file:wasm/collection-util/pkg
+  collection-util: link:/home/ivand/src/ivan-dimitrov-employees/collection-util/pkg
   d3: ^7.8.2
   dayjs: ^1.11.7
   postcss: ^8.4.21
@@ -15,12 +15,13 @@ specifiers:
   tailwindcss: ^3.2.7
   typescript: ^4.9.3
   vite: ^4.1.0
+  vite-plugin-rsw: ^2.0.11
   vite-plugin-top-level-await: ^1.3.0
   vite-plugin-wasm: ^3.2.2
 
 dependencies:
   autoprefixer: 10.4.14_postcss@8.4.21
-  collection-util: file:wasm/collection-util/pkg
+  collection-util: link:collection-util/pkg
   d3: 7.8.2
   dayjs: 1.11.7
   postcss: 8.4.21
@@ -37,6 +38,7 @@ devDependencies:
   '@vitejs/plugin-react-swc': 3.2.0_vite@4.1.4
   typescript: 4.9.5
   vite: 4.1.4
+  vite-plugin-rsw: 2.0.11_vite@4.1.4
 
 packages:
 
@@ -1387,6 +1389,14 @@ packages:
     hasBin: true
     dev: false
 
+  /vite-plugin-rsw/2.0.11_vite@4.1.4:
+    resolution: {integrity: sha512-OqbGAtdDfK88gDoxA9wVdGowCmlzLSXEyRvD8CgTu9IP5O7tx8Tg2CtIzKOyOWZtHHZPhtdYiN+5Il6rTZCkzw==}
+    peerDependencies:
+      vite: '>2.8.0-0'
+    dependencies:
+      vite: 4.1.4
+    dev: true
+
   /vite-plugin-top-level-await/1.3.0_vite@4.1.4:
     resolution: {integrity: sha512-owIfsgWudMlQODWJSwp0sQB3AZZu3qsMygeBjZy8CyjEk6OB9AGd8lHqmgwrcEqgvy9N58lYxSBLVk3/4ejEiA==}
     peerDependencies:
@@ -1448,10 +1458,4 @@ packages:
   /yaml/1.10.2:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
-    dev: false
-
-  file:wasm/collection-util/pkg:
-    resolution: {directory: wasm/collection-util/pkg, type: directory}
-    name: collection-util
-    version: 0.1.0
     dev: false

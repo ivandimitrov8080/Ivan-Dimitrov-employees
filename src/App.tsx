@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import parse from './lib/csvParser';
 import calculateLongestDaysWorked from './lib/longestDaysWorkedUtil';
 import { Row } from 'collection-util'
@@ -6,11 +6,12 @@ import EmployeeTable from './components/EmployeeTable';
 import EmployeeRelationship from './types/employeeRelationship';
 import Spinner from './components/Spinner';
 import FileUpload from './components/FileUpload';
+import init from 'collection-util';
 
 const App: React.FC<{}> = () => {
 
   const [employeeRelationships, setEmployeeRelationships] = useState<EmployeeRelationship[]>()
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   const chooseFile = (e: ChangeEvent<HTMLInputElement>) => {
     const target: HTMLInputElement = e.target as HTMLInputElement
@@ -28,6 +29,12 @@ const App: React.FC<{}> = () => {
       setLoading(false)
     }, 0)
   }
+
+  useEffect(() => {
+    init().then(() => {
+      setLoading(false)
+    })
+  })
 
   const table = () => {
     return (<EmployeeTable employeeRelationships={employeeRelationships} />)
