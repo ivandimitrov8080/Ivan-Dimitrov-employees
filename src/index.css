@@ -3,7 +3,27 @@
 @tailwind utilities;
 
 body {
-	@apply bg-slate-700
+	@apply bg-slate-900
+}
+
+* {
+	@apply dark:text-amber-200
+}
+
+.th1 {
+	@apply px-6 py-3 bg-gray-50 dark:bg-gray-600
+}
+
+.th2 {
+	@apply px-6 py-3 bg-gray-200 dark:bg-gray-800
+}
+
+.td1 {
+	@apply px-6 py-4 bg-gray-50 dark:bg-gray-600
+}
+
+.td2 {
+	@apply px-6 py-4 bg-gray-200 dark:bg-gray-800
 }
 
 .fileinput {

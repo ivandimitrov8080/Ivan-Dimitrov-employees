@@ -50,7 +50,7 @@ const App: React.FC<{}> = () => {
   }
 
   return (
-    <div className='ctnr'>
+    <div className='ctnr dark'>
       {loading ? <Spinner /> : ui()}
     </div>
   )
