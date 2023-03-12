@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	@apply bg-slate-700
+}
+
+.fileinput {
+	@apply file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100 h-fit
+}
+
+td {
+	white-space: pre;
+}
+
+.ctnr {
+	@apply container mx-auto px-10 flex items-center justify-center h-screen flex-col
+}
