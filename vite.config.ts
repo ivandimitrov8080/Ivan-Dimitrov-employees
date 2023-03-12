@@ -8,5 +8,8 @@ export default defineConfig({
   plugins: [react(), wasm(), topLevelAwait()],
   optimizeDeps: {
     force: true
+  },
+  build: {
+    outDir: './docs'
   }
 })
