@@ -4,6 +4,7 @@
   "main": "public/main.js",
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://ivandimitrov8080.github.io/Ivan-Dimitrov-employees/",
   "scripts": {
     "dev": "vite",
     "build": "./wasm/collection-util/build && tsc && vite build",
