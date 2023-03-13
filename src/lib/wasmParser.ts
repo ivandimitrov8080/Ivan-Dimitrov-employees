@@ -13,9 +13,12 @@ const parseProjects = (arr: []): ProjectRelationship[] => {
 	return result
 }
 
-const parseEmployeeRelationship = (arr: []): EmployeeRelationship[] => {
+const parseEmployeeRelationship = (arr: [], lim: number): EmployeeRelationship[] => {
 	let result: EmployeeRelationship[] = []
-	for (let item of arr) {
+	let size = arr.length
+	let limit = lim > size ? size : lim === -1 ? size : lim
+	for (let i = 0; i < limit; i++) {
+		let item = arr[i]
 		result.push({
 			eid1: item[0],
 			eid2: item[1],

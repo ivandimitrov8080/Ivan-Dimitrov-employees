@@ -7,11 +7,13 @@ import EmployeeRelationship from './types/employeeRelationship';
 import Spinner from './components/Spinner';
 import FileUpload from './components/FileUpload';
 import init from 'collection-util';
+import TableRowLimit from './components/TableRowLimit';
 
 const App: React.FC<{}> = () => {
 
   const [employeeRelationships, setEmployeeRelationships] = useState<EmployeeRelationship[]>()
   const [loading, setLoading] = useState(true)
+  const [rowLimit, setRowLimit] = useState(10)
 
   const chooseFile = (e: ChangeEvent<HTMLInputElement>) => {
     const target: HTMLInputElement = e.target as HTMLInputElement
@@ -25,7 +27,7 @@ const App: React.FC<{}> = () => {
 
   const processData = (r: Array<Row>) => {
     setTimeout(() => {
-      setEmployeeRelationships(calculateLongestDaysWorked(r))
+      setEmployeeRelationships(calculateLongestDaysWorked(r, rowLimit))
       setLoading(false)
     }, 0)
   }
@@ -41,7 +43,12 @@ const App: React.FC<{}> = () => {
   }
 
   const fileUpload = () => {
-    return (<FileUpload chooseFile={chooseFile} />)
+    return (
+      <div className='w-full flex space-y-10 flex-col'>
+        <TableRowLimit limit={rowLimit} setLimit={setRowLimit} />
+        <FileUpload chooseFile={chooseFile} />
+      </div>
+    )
   }
 
   const ui = () => {
