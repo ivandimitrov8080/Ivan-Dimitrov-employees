@@ -11,7 +11,11 @@ Files to upload:
 [test.csv](test.csv) consisting of about 5-10 rows that can be inspected by a human.
 [sirma.csv](sirma.csv) consisting of 1000 rows that test the performance.
 
-# Dependencies:
+# Run dependencies:
+
+The newest Firefox or Chromium-based browser.
+
+# Build Dependencies:
 
 ```
 pnpm
