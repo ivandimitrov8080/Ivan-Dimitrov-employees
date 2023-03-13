@@ -6,6 +6,11 @@ You can see more info at [the challenge pdf doc](sirma.pdf)
 
 Can be used with [github pages](https://ivandimitrov8080.github.io/Ivan-Dimitrov-employees/)
 
+Files to upload:
+
+[test.csv](test.csv) consisting of about 5-10 rows that can be inspected by a human.
+[sirma.csv](sirma.csv) consisting of 1000 rows that test the performance.
+
 # Dependencies:
 
 ```
