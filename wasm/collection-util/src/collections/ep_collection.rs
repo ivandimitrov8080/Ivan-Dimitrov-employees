@@ -59,7 +59,7 @@ impl EpCollection {
         let r = &self.rows;
         for i in 0..r.len() - 1 {
             for j in i + 1..r.len() {
-                if r[i].pid.eq(&r[j].pid) {
+                if r[i].pid.eq(&r[j].pid) && r[i].eid.ne(&r[j].eid) {
                     let ol = r[i].date_range.overlap(&r[j].date_range);
                     if ol > 0 {
                         let l = Link::new(r[i].eid.clone(), r[j].eid.clone());
