@@ -18,8 +18,8 @@ const App: React.FC<{}> = () => {
   const chooseFile = (e: ChangeEvent<HTMLInputElement>) => {
     const target: HTMLInputElement = e.target as HTMLInputElement
     if (target.files) {
+      setLoading(true)
       parse(target.files, (r: Array<Row>) => {
-        setLoading(true)
         processData(r)
       })
     }

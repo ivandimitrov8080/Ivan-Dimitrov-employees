@@ -19,11 +19,11 @@ body {
 }
 
 .td1 {
-	@apply px-6 py-4 bg-gray-50 dark:bg-gray-600
+	@apply px-6 py-4 bg-gray-50 dark:bg-gray-600 align-top
 }
 
 .td2 {
-	@apply px-6 py-4 bg-gray-200 dark:bg-gray-800
+	@apply px-6 py-4 bg-gray-200 dark:bg-gray-800 align-top
 }
 
 .fileinput {
